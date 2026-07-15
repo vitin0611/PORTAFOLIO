@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Victor De Peña — Seguridad Informática | ITLA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <div class="nav-tag">Portafolio<span>@victorj</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">whoami</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#certs">certs</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+    <div class="nav-clock">~/root</div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="term-window">
+      <div class="term-bar">
+        <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span class="term-title">root@kali: ~</span>
+      </div>
+      <div class="hero-body" id="hero-type">
+        <!-- filled by JS typewriter, with noscript-safe fallback below -->
+      </div>
+    </div>
+    <div class="hero-cta">
+      <a href="#projects" class="btn">Ver proyectos</a>
+      <a href="#" class="btn ghost">Descargar CV (PDF)</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-prompt">$ cat about.txt</div>
+      <div class="sec-title">Sobre <span class="amber">mí</span></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Soy estudiante de <strong>Seguridad Informática en el ITLA</strong>, enfocado en <strong>pentesting y ethical hacking</strong>. Me interesa entender cómo se rompen los sistemas para poder ayudar a defenderlos mejor.</p>
+        <p>Practico en laboratorios como <strong>TryHackMe</strong> y <strong>HackTheBox</strong>, y disfruto documentar cada hallazgo como si fuera un reporte profesional: reproducible, claro y con remediación.</p>
+        <p>Actualmente busco prácticas o proyectos donde pueda aportar en pruebas de intrusión, análisis de vulnerabilidades o hardening de infraestructura.</p>
+      </div>
+      <div class="term-window scan-panel">
+        <div class="term-bar">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="term-title">nmap -sV skills.local</span>
+        </div>
+        <div class="scan-body">
+          <div class="scan-cmd"><span class="prompt">nmap -sV -p- skills.local</span></div>
+          <table class="scan">
+            <tr><th>Puerto</th><th>Estado</th><th>Servicio / Skill</th><th>Nivel</th></tr>
+            <tr><td>22/tcp</td><td><span class="state open">open</span></td><td>Linux &amp; Redes</td><td><span class="skill-bar-wrap"><span class="skill-bar" style="width:85%"></span></span></td></tr>
+            <tr><td>80/tcp</td><td><span class="state open">open</span></td><td>Web App Pentesting</td><td><span class="skill-bar-wrap"><span class="skill-bar" style="width:75%"></span></span></td></tr>
+            <tr><td>443/tcp</td><td><span class="state open">open</span></td><td>Burp Suite / OWASP Top 10</td><td><span class="skill-bar-wrap"><span class="skill-bar" style="width:70%"></span></span></td></tr>
+            <tr><td>445/tcp</td><td><span class="state filtered">filtered</span></td><td>Active Directory</td><td><span class="skill-bar-wrap"><span class="skill-bar" style="width:45%"></span></span></td></tr>
+            <tr><td>1521/tcp</td><td><span class="state open">open</span></td><td>Python / Bash Scripting</td><td><span class="skill-bar-wrap"><span class="skill-bar" style="width:65%"></span></span></td></tr>
+            <tr><td>3389/tcp</td><td><span class="state filtered">filtered</span></td><td>Análisis Forense</td><td><span class="skill-bar-wrap"><span class="skill-bar" style="width:30%"></span></span></td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-prompt">$ cat reporte_hallazgos.md</div>
+      <div class="sec-title">Proyectos <span class="amber">destacados</span></div>
+    </div>
+    <div class="findings">
+
+      <div class="finding">
+        <div class="finding-top">
+          <span class="finding-id">FINDING-01 · Laboratorio de Pentesting Interno</span>
+          <span class="sev critica">Impacto alto</span>
+        </div>
+        <div class="finding-title">Red vulnerable simulada (Active Directory)</div>
+        <p class="finding-desc">Levanté un entorno con máquinas virtuales vulnerables para practicar escalada de privilegios y movimiento lateral en un dominio de Active Directory, documentando cada paso como un reporte real de pentest.</p>
+        <div class="finding-tags">
+          <span class="tag">Active Directory</span>
+          <span class="tag">Mimikatz</span>
+          <span class="tag">Kerberoasting</span>
+          <span class="tag">VirtualBox</span>
+        </div>
+        <div class="finding-links">
+          <a href="#">Ver en GitHub →</a>
+          <a href="#">Leer writeup →</a>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="finding-top">
+          <span class="finding-id">FINDING-02 · Auditoría de aplicación web</span>
+          <span class="sev alta">Impacto medio-alto</span>
+        </div>
+        <div class="finding-title">Análisis de vulnerabilidades OWASP Top 10</div>
+        <p class="finding-desc">Auditoría de una aplicación web de práctica (DVWA), identificando y explotando fallos como SQL Injection, XSS y CSRF, con propuestas de remediación para cada uno.</p>
+        <div class="finding-tags">
+          <span class="tag">Burp Suite</span>
+          <span class="tag">SQLi</span>
+          <span class="tag">XSS</span>
+          <span class="tag">DVWA</span>
+        </div>
+        <div class="finding-links">
+          <a href="#">Ver en GitHub →</a>
+          <a href="#">Leer writeup →</a>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="finding-top">
+          <span class="finding-id">FINDING-03 · Automatización de reconocimiento</span>
+          <span class="sev media">Impacto medio</span>
+        </div>
+        <div class="finding-title">Script de recon automatizado en Python</div>
+        <p class="finding-desc">Herramienta en Python que automatiza la fase de reconocimiento (escaneo de puertos, subdominios y tecnologías web) y genera un reporte inicial en Markdown.</p>
+        <div class="finding-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Nmap</span>
+          <span class="tag">Automatización</span>
+        </div>
+        <div class="finding-links">
+          <a href="#">Ver en GitHub →</a>
+        </div>
+      </div>
+
+    </div>
+    <p class="finding-note">// Niveles de "impacto" usados como referencia de complejidad del proyecto, no como severidad real de una vulnerabilidad en producción.</p>
+  </div>
+</section>
+
+<section id="certs">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-prompt">$ ls -la ./certificaciones</div>
+      <div class="sec-title">Certificaciones <span class="amber">y cursos</span></div>
+    </div>
+    <div class="term-window">
+      <div class="term-bar">
+        <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span class="term-title">~/certificaciones</span>
+      </div>
+      <div class="certs-body">
+        <div class="certs-cmd"><span class="prompt">ls -la</span></div>
+
+        <div class="cert-row">
+          <span class="cert-perm">-r-xr--r--</span>
+          <span class="cert-name"><a href="#">CCNA: Introducción a las redes</a><br><span class="cert-issuer">Cisco Networking Academy</span></span>
+          <span class="cert-date">2026</span>
+        </div>
+        <div class="cert-row">
+          <span class="cert-perm">-r-xr--r--</span>
+          <span class="cert-name"><a href="#">IT Essentials 7</a><br><span class="cert-issuer">Cisco Networking Academy</span></span>
+          <span class="cert-date">2025</span>
+        </div>
+        <div class="cert-row">
+          <span class="cert-perm">-r-xr--r--</span>
+          <span class="cert-name"><a href="#">Pre Security Learning Path</a><br><span class="cert-issuer">TryHackMe</span></span>
+          <span class="cert-date">2024</span>
+        </div>
+        <div class="cert-row">
+          <span class="cert-perm">-r-xr--r--</span>
+          <span class="cert-name"><a href="#">Fundamentos de Redes (CCNA 1)</a><br><span class="cert-issuer">ITLA / Cisco</span></span>
+          <span class="cert-date">2023</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-prompt">$ ./send_message.sh</div>
+      <div class="sec-title">Hablemos <span class="amber">un rato</span></div>
+    </div>
+    <div class="term-window">
+      <div class="term-bar">
+        <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span class="term-title">contact@alexr</span>
+      </div>
+      <div class="contact-body">
+        <div class="field-row">
+          <label class="field-label" for="name">set --name</label>
+          <input id="name" type="text" placeholder="Tu nombre">
+        </div>
+        <div class="field-row">
+          <label class="field-label" for="email">set --email</label>
+          <input id="email" type="email" placeholder="tucorreo@ejemplo.com">
+        </div>
+        <div class="field-row">
+          <label class="field-label" for="msg">set --message</label>
+          <textarea id="msg" placeholder="Escribe tu mensaje..."></textarea>
+        </div>
+        <button class="btn" type="button" onclick="handleContactSubmit()">Enviar mensaje</button>
+
+        <div class="contact-direct">
+          <span>o directo:</span>
+          <a href="mailto:victordepena18@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/in/victordepena-cybersecurity/">LinkedIn</a>
+          <a href="https://github.com/vitin0611">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  root@portfolio:~$<span class="cursor"></span>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
